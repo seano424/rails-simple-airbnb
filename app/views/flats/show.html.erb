@@ -1,0 +1,78 @@
+<%= render "nav" %>
+<%= render "jumbotron" %>
+
+
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="card flat-card mb-4">
+        <div class="card-body">
+          <h1 class="card-title"><%= @flat.name %> at <%= @flat.address %></h1>
+          <p class="card-text"><%= @flat.description %></p>
+        </div>
+      </div>
+      <div class="card flat-card">
+        <div class="card-body">
+          <h2 class="card-title" style="height: 60vh">A bit more about this flat...</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Book this place!</h4>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">To</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">From</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          </div>
+          <a href="#" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Submit</a>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h3 class="card-title">Details</h3>
+          <div class="d-flex justify-content-start">
+            <div class="flex pr-4">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+              </svg>
+              <span><%= @flat.number_of_guests %></span>
+            </div>
+            <div class="flex">
+              <span><strong>$</strong> <%= @flat.price_per_night %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+              <p>Share</p>
+            </div>
+            <div class="col-8 d-flex justify-content-end">
+              <span class="mr-3 p-2 text-center"><i class="fab fa-facebook"></i></span>
+              <span class="mr-3 p-2 text-center"><i class="fab fa-instagram"></i></span>
+              <span class="mr-3 p-2 text-center"><i class="fab fa-pinterest"></i></span>
+              <span class="mr-3 p-2 text-center"><i class="fab fa-github"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
